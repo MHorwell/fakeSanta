@@ -1,16 +1,13 @@
 package fakesanta;
 
-public class Grotto {
+public class Grotto extends Object{
 
 	private String description;
 	private boolean doorUnlocked;
-	private int xCoordinate;
-	private int yCoordinate;
 
 	public Grotto(int xCoordinate,int yCoordinate) {
-		this.xCoordinate = xCoordinate;
-		this.yCoordinate = yCoordinate;
-		description = "A locked door prevents you from entering there's a window to the side but it's covered over by something.";
+		super(xCoordinate, yCoordinate);
+		this.setDescription("A locked door prevents you from entering there's a window to the side but it's covered over by something.");
 		this.doorUnlocked = false;
 	}
 
@@ -30,22 +27,6 @@ public class Grotto {
 		this.doorUnlocked = doorLocked;
 	}
 
-	public int getxCoordinate() {
-		return xCoordinate;
-	}
-
-	public void setxCoordinate(int xCoordinate) {
-		this.xCoordinate = xCoordinate;
-	}
-
-	public int getyCoordinate() {
-		return yCoordinate;
-	}
-
-	public void setyCoordinate(int yCoordinate) {
-		this.yCoordinate = yCoordinate;
-	}
-
 	public String openDoor(String answer) {
 		if (answer.equals("y")) {
 			if (doorUnlocked = false) {
@@ -57,7 +38,6 @@ public class Grotto {
 						+ "Suddenly you hear a noise behind you and you turn around to see a sharpened candy cane flying towards your face. END";
 			}
 		}
-
 		else {
 			return "Okay then.";
 		}

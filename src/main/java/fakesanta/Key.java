@@ -1,39 +1,13 @@
 package fakesanta;
 
-public class Key{
+public class Key extends Object{
 	
-	private String keyDescription;
 	private boolean inInventory;
-	private int xCoordinate;
-	private int yCoordinate;
 	
-	public Key() {
-		this.keyDescription =  "It's a Christmas tree in the shape of a key.";
+	public Key(int xCoordinate, int yCoordinate) {
+		super(xCoordinate, yCoordinate);
+		this.setDescription("It's a key in the shape of a Christmas tree.");
 		this.inInventory = false;
-	}
-
-	public int getxCoordinate() {
-		return xCoordinate;
-	}
-
-	public void setxCoordinate(int xCoordinate) {
-		this.xCoordinate = xCoordinate;
-	}
-
-	public int getyCoordinate() {
-		return yCoordinate;
-	}
-
-	public void setyCoordinate(int yCoordinate) {
-		this.yCoordinate = yCoordinate;
-	}
-
-	public String getKeyDescription() {
-		return keyDescription;
-	}
-
-	public void setKeyDescription(String keyDescription) {
-		this.keyDescription = keyDescription;
 	}
 
 	public boolean isInInventory() {
